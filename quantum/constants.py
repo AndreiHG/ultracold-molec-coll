@@ -17,6 +17,8 @@ cm = 1e-2
 amu = 1.660539040 * 1e-27 # [kg]
 a0 = 0.52917720859 * 1e-10 # bohr radius [m]
 
+Ha = 4.35974* 1e-18 # [J] 
+
 e = 1.602176487 * 1e-19 # electron charge [C]
 
 eps0 = 8.854187817 * 1e-12 # vacuum permittivity [F/m]
