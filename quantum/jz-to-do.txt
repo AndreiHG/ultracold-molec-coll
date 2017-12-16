@@ -1,0 +1,25 @@
+
+
+test in SI units -- harmonic oscillator
+^ done
+
+clean up code
+fgh into package
+^ done
+
+run for Cs+Cs2, try to reproduce table ii numbers
+
+-- check vibrational and rotational splitting
+
+
+
+
+read phase space analysis paper
+https://journals.aps.org/pre/pdf/10.1103/PhysRevE.53.1217
+
+analyze numerical convergence of fgh method
+
+if have time
+compare with finite element method?
+
+
