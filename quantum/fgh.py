@@ -83,7 +83,7 @@ def solve(prob, grid):
         if prob.units == 'SI':
             T_phi_n = T_phi_n * c.hbar**2
 
-        H[:,n] = T_phi_n + V_phi_n
+        H[:,n] = np.real(T_phi_n + V_phi_n)
 
     # diagonalize
     E, psi = np.linalg.eig(H)
@@ -96,8 +96,6 @@ def solve(prob, grid):
 
     # normalize
     psi_norm = normalize(psi, grid)
-
-    print(E[0:20])
     
     return solution(E,psi,grid,prob)
 
