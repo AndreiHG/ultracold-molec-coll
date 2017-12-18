@@ -57,57 +57,62 @@
 \newlabel{eqn:fgh-continuous}{{9}{7}{}{}{}}
 \newlabel{eqn:fgh-discrete}{{18}{7}{}{}{}}
 \citation{fattel1996}
-\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Mapping of coordinates $x = Q-A\qopname  \relax o{arctan}(\beta Q)$, where $A=2000, \beta = 1/2020$}}{8}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Mapping of coordinates $x = Q-A\qopname  \relax o{arctan}(\beta Q)$, where $A=2000, \beta = 1/2020$. The grid gives a denser sampling for small distances than at large distances as desired.}}{8}{}}
 \newlabel{fig:mapping}{{7}{8}{}{}{}}
+\newlabel{sec:fgh-psa}{{III\tmspace  +\thinmuskip {.1667em}B\tmspace  +\thinmuskip {.1667em}3}{8}{}{}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3}{}Convergence}{8}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Contour plot of the Hamiltonian with the Lennard-Jones potential for Li+Li in mapped phase space.The energy levels in phase space give a rough idea for the grid bounds necessary to achieve convergence. The contours represent energy levels of $E = -10^{-m}$ a.u. for $m=1,\cdots  ,8$.}}{8}{}}
+\newlabel{fig:psa}{{8}{8}{}{}{}}
+\newlabel{sec:dos}{{III\tmspace  +\thinmuskip {.1667em}C}{8}{}{}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {C}Density of states and lifetime}{8}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Wavefunctions and corresponding energy levels of Li+Li system with angular momentum number $n=0$.}}{8}{}}
-\newlabel{fig:li_dimer_wavefunctions}{{8}{8}{}{}{}}
-\citation{ColdChemBook,Krems2017}
-\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Schematic of method to find DOS near ro-vibrational ground state threshold (not to scale). Each potential energy curve represents an atom+dimer interaction potential (blue, purple, orange series). Horizontal lines in each color series belong to the series $E_{\alpha }^L$ for a given $(v,n)$. The energy is offset by the atom+atom bound state energy. These combined give rise to the energy spectrum $E_\alpha ^{(L,v,n)}$. We count the number of states in the gray shaded area to find an average DOS near the ro-vibrational collision threshold.}}{9}{}}
-\newlabel{fig:dos}{{9}{9}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Wavefunctions and corresponding energy levels of Li+Li system with angular momentum number $n=0$.}}{9}{}}
+\newlabel{fig:li_dimer_wavefunctions}{{9}{9}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Schematic of method to find DOS near ro-vibrational ground state threshold (not to scale). Each potential energy curve represents an atom+dimer interaction potential (blue, purple, orange series). Horizontal lines in each color series belong to the series $E_{\alpha }^L$ for a given $(v,n)$. The energy is offset by the atom+atom bound state energy. These combined give rise to the energy spectrum $E_\alpha ^{(L,v,n)}$. We count the number of states in the gray shaded area to find an average DOS near the ro-vibrational collision threshold.}}{9}{}}
+\newlabel{fig:dos}{{10}{9}{}{}{}}
 \newlabel{sec:QuantumTraj}{{IV}{9}{}{}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {IV}Quantum Mechanical Method}{9}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {II}{\ignorespaces Density of states}}{9}{}}
-\newlabel{tab:dos}{{II}{9}{}{}{}}
 \newlabel{sec:QuantumFormalism}{{IV\tmspace  +\thinmuskip {.1667em}A}{9}{}{}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {A} Formulating the Quantum Problem}{9}{}}
-\newlabel{eq:SchrodFinal}{{27}{9}{}{}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {II}{\ignorespaces Density of states}}{9}{}}
+\newlabel{tab:dos}{{II}{9}{}{}{}}
+\citation{ColdChemBook,Krems2017}
+\newlabel{eq:SchrodFinal}{{27}{10}{}{}{}}
+\newlabel{eq:BasisExpansion}{{29}{10}{}{}{}}
 \citation{Krems2017,ColdChemBook}
 \citation{Krems2017,ColdMolsBook,ColdChemBook}
-\newlabel{eq:BasisExpansion}{{29}{10}{}{}{}}
 \citation{JohnsonNumerov,Johnson73}
-\citation{Johnson73,JohnsonNumerov}
-\citation{ManJohnsonRederived,Johnson73,JohnsonNumerov,Friedman95}
 \newlabel{sec:QuantumMethod}{{IV\tmspace  +\thinmuskip {.1667em}B}{11}{}{}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {B} Numerical Methods for the Quantum Problem}{11}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {1}Single-Channel Case}{11}{}}
 \newlabel{eq:Schrod1}{{30}{11}{}{}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {2}Multi-channel case}{11}{}}
 \newlabel{eq:MatrixNumerov}{{32}{11}{}{}{}}
-\newlabel{eq:LogDerivEq}{{35}{11}{}{}{}}
+\citation{Johnson73,JohnsonNumerov}
+\citation{ManJohnsonRederived,Johnson73,JohnsonNumerov,Friedman95}
 \citation{Connolly2013,Tscherbul2010}
+\newlabel{eq:LogDerivEq}{{35}{12}{}{}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {C}Numerical Implementation and Results}{12}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {1}Atom-Atom Collisions}{12}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Relative error in log-derivative integration as a function of step-size, $h$. The expected scaling is achieved.}}{12}{}}
+\newlabel{fig:ConvCheck}{{11}{12}{}{}{}}
 \citation{Krems2017,Tscherbul2010,ColdChemBook}
 \citation{AlexanderNotes}
 \citation{Tscherbul2010,Connolloy2010}
-\@writefile{toc}{\contentsline {subsection}{\numberline {C}Numerical Implementation and Results}{12}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {1}Atom-Atom Collisions}{12}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Relative error in log-derivative integration as a function of step-size, $h$. The expected scaling is achieved.}}{12}{}}
-\newlabel{fig:ConvCheck}{{10}{12}{}{}{}}
 \citation{Krems2017,ColdChemBook,ColdMolsBook}
 \citation{Krems2017,ColdMolsBook}
 \citation{Tscherbul2010,Connolly2013}
 \@writefile{lot}{\contentsline {table}{\numberline {III}{\ignorespaces Parameters used to describe the coupled-channels interaction potential. All are defined in atomic units.}}{13}{}}
 \newlabel{tab:QuantumCoeffs}{{III}{13}{}{}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Spin-flip probability as a function of collision energy, for $\ell = 0, 30, 50$. The lowest energy plotted to $E = 20$ K. As the angular momentum increases, the centrifugal barrier increasingly suppresses the collision at that $\ell $.}}{13}{}}
-\newlabel{fig:AtomAtomVersusE}{{11}{13}{}{}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Spin-flip probability as a function of angular momentum channel, for a range of energies. As the collision energy increases, higher partial waves contribute more heavily because only these high energy collisions have energy to surpass the centrifugal barrier.}}{13}{}}
-\newlabel{fig:AtomAtomVersusL}{{12}{13}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces Spin-flip probability as a function of collision energy, for $\ell = 0, 30, 50$. The lowest energy plotted to $E = 20$ K. As the angular momentum increases, the centrifugal barrier increasingly suppresses the collision at that $\ell $.}}{13}{}}
+\newlabel{fig:AtomAtomVersusE}{{12}{13}{}{}{}}
 \citation{MOLPRO,Safronova}
+\@writefile{toc}{\contentsline {section}{\numberline {V}Conclusion}{14}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces Spin-flip probability as a function of angular momentum channel, for a range of energies. As the collision energy increases, higher partial waves contribute more heavily because only these high energy collisions have energy to surpass the centrifugal barrier.}}{14}{}}
+\newlabel{fig:AtomAtomVersusL}{{13}{14}{}{}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces Total integral cross section (ICS) for the alkaline-earth atom - He collision complex. Also shown is the number of partial waves contributing to the scattering. At temperatures $\leq 20$ K, the integral cross section drops as do the number of partial waves required for the ICS sum to converge. Spin-changing collisions are expected to be negligible at these cold temperatures.}}{14}{}}
+\newlabel{fig:TotalCrossSection}{{14}{14}{}{}{}}
 \bibdata{WriteupNotes,WriteupFinal}
 \bibcite{SchrodPaper1926}{{1}{1926}{{Schrodinger}}{{}}}
-\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces Total integral cross section (ICS) for the alkaline-earth atom - He collision complex. Also shown is the number of partial waves contributing to the scattering. At temperatures $\leq 20$ K, the integral cross section drops as do the number of partial waves required for the ICS sum to converge. Spin-changing collisions are expected to be negligible at these cold temperatures.}}{14}{}}
-\newlabel{fig:TotalCrossSection}{{13}{14}{}{}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {V}Conclusion}{14}{}}
 \bibcite{DiracTextbook}{{2}{1935}{{Dirac}}{{}}}
 \bibcite{QuantumScatteringTextbook}{{3}{1963}{{Ross}}{{}}}
 \bibcite{ColdChemBook}{{4}{2018}{{Klos\ and\ Lique}}{{}}}
@@ -135,6 +140,8 @@
 \bibstyle{apsrev4-1}
 \citation{REVTEX41Control}
 \citation{apsrev41Control}
+\@writefile{toc}{\appendix }
+\@writefile{toc}{\contentsline {section}{\numberline {A}List of written code}{15}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {}References}{15}{}}
 \newlabel{LastBibItem}{{25}{15}{}{}{}}
 \newlabel{LastPage}{{}{15}{}{}{}}

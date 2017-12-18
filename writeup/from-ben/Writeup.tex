@@ -92,7 +92,9 @@ At lower, so-called ``ultracold" temperatures ($< 1$ mK), temperatures much cold
 
 \subsection{Theoretical Methods in Scattering Theory}
 
-Based on this motivations, theoretical physicists have focused much effort on a complete description of a general collision process. In this paper, the problem we set out to solve is how to describe atomic and molecular collisions accurately. We focus on three potential methods, each of which is widely used by professional theorists. One, classical trajectory tracking, neglects quantum mechanical effects and simply asks: what orbits do colliding atoms and molecules take? By running many individual trajectories and looking at the statistics of these collisions, one can extract experimentally useful parameters such ask collision lifetimes and reaction rates. Furthermore, this method allows us to examine the role that chaos may play in atom + molecule collisions, especially at the ultralow temperatures commonly studied in experiments. Another method, called the RRKM method, attempts to use a mix of semi-classical and quantum mechanical reasoning to ascertain statistics about the collisions. In particular, the potential energy surface is treated semi-classically and solved for as a single channel problem quantum mechanically. Finally, we also consider fully quantum mechanical solutions of the scattering problem. This involves solving a Schrodinger equation including interaction potentials defined by the collision partners. While this is surely the most ``complete" description of a collision attainable, it is also the most difficult: not only can the Schrodinger equation considered include many coupled collision channels, but without sufficiently accurate interaction potentials the solution to the problem will not match reality. Determining these potential energy curves is a full-fledged field of theoretical physics in its own right, and one which we do not explore here. Instead, we study algorithms to solve the quantum scattering problem using toy potentials. In this way, we can extract collision properties in line with physical intuition but not highly accurate for any particular system. Note that, throughout this paper, we follow the standard convention that energy and temperature are considered somewhat equivalent here and are related by $E = k_B T$, where $k_B$ is Boltzmann's constant. We also make use of atomic units, in each $\hbar = 1$ and the unit of energy if the Hartree.\footnote{The abbreviation for ``atomic units" is a.u., and should not be confused with arbitrary units.}
+Based on these motivations, theoretical physicists have focused much effort on a complete description of a general collision process. In this paper, the problem we set out to solve is how to describe atomic and molecular collisions accurately. We focus on three potential methods, each of which is widely used by professional theorists. One, classical trajectory tracking, neglects quantum mechanical effects and simply asks: what orbits do colliding atoms and molecules take? By running many individual trajectories and looking at the statistics of these collisions, one can extract experimentally useful parameters such ask collision lifetimes and reaction rates. Furthermore, this method allows us to examine the role that chaos may play in atom + molecule collisions, especially at the ultralow temperatures commonly studied in experiments. Another method, called the RRKM method, attempts to use a mix of semi-classical and quantum mechanical reasoning to ascertain statistics about the collisions. In this approach the potential energy surface can be drastically simplified and treated as a single channel problem. From these we may obtain both qualitative and quantitative results relevant to experiment observations. Finally, we also consider fully quantum mechanical solutions of the scattering problem. This involves solving a Schrodinger equation including interaction potentials defined by the collision partners. While this is surely the most ``complete" description of a collision attainable, it is also the most difficult: not only can the Schrodinger equation considered include many coupled collision channels, but without sufficiently accurate interaction potentials the solution to the problem will not match reality. Determining these potential energy curves is a full-fledged field of theoretical physics in its own right, and one which we do not explore here. Instead, we study algorithms to solve the quantum scattering problem using toy potentials. In this way, we can extract collision properties in line with physical intuition but not highly accurate for any particular system. 
+
+Note that, throughout this paper, we follow the standard convention that energy and temperature are considered somewhat equivalent and are related by $E = k_B T$, where $k_B$ is Boltzmann's constant. We also make use of atomic units, in which $\hbar = 1$ and the unit of energy is the Hartree.\footnote{The abbreviation for ``atomic units" is a.u., and should not be confused with arbitrary units.}
 
 
 \section{\label{sec:ClassicalTraj} Classical Method: Trajectory Tracking}
@@ -142,7 +144,7 @@ An exaggerated version of the Lennard-Jones potential is given in Fig.~\ref{fig:
 \label{fig:schematic}
 \end{figure}
 
- We numerically integrate the classical trajectories according to the following algorithm (the code this describes can be found in $\texttt{molecCollPackage.py}$). For a particular choice of atom + dimer, we define analytically the derivatives of the Lennard-Jones potential to compute the force acting on each atom: $\mathbf{F} = -\mathbf{\nabla}V$. It is assumed that the dimer starts at the origin with zero kinetic energy, and the lone atom approaches along the $x$-axis with kinetic energy set by the initial temperature, initially displaced far enough that it feels a vanishingly small force from the dimer. We also specify an initial angle of the dimer relative to the collision axis, and an impact parameter to offset the colliding atom from the collision axis. We then transform into the center-of-mass frame by boosting at a velocity equal to $1/3$ of the incoming atom's velocity. Using a $\texttt{scipy}$ integration routine, we then propagate each atom under the influence of the Lennard-Jones potentials until the collision complex has broken apart. We determine the time at which this happens based on when the hyperradius of the complex, defined by $r_\text{hyp} = \sqrt{r_{AB}^2 + r_{AC}^2 + r_{BC}^2}$, exceed the initial distance between the atom and dimer. The total time between the beginning of the simulation and the time at which we claim the collision has broken apart is called the lifetime of the collision. For certain statistics which will be described in detail below, it is also important to know more than just the collision lifetime. Therefore, we also record which atom(s) emerge from the collision as a lone atom, and which as part of a dimer. We thereby assign each collision to a ``basin" defined by which atom emerges alone.
+ We numerically integrate the classical trajectories according to the following algorithm (the code can be found in $\texttt{molecCollPackage.py}$). For a particular choice of atom + dimer, we define analytically the derivatives of the Lennard-Jones potential to compute the force acting on each atom: $\mathbf{F} = -\mathbf{\nabla}V$. It is assumed that the dimer starts at the origin with zero kinetic energy, and the lone atom approaches along the $x$-axis with kinetic energy set by the initial temperature, initially displaced far enough that it feels a vanishingly small force from the dimer. We also specify an initial angle of the dimer relative to the collision axis, and an impact parameter to offset the colliding atom from the collision axis. We then transform into the center-of-mass frame by boosting at a velocity equal to $1/3$ of the incoming atom's velocity. Using a $\texttt{scipy}$ integration routine, we then propagate each atom under the influence of the Lennard-Jones potentials until the collision complex has broken apart. We determine the time at which this happens based on when the hyperradius of the complex, defined by $r_\text{hyp} = \sqrt{r_{AB}^2 + r_{AC}^2 + r_{BC}^2}$, exceed the initial distance between the atom and dimer. The total time between the beginning of the simulation and the time at which we claim the collision has broken apart is called the lifetime of the collision. For certain statistics which will be described in detail below, it is also important to know more than just the collision lifetime. Therefore, we also record which atom(s) emerge from the collision as a lone atom, and which as part of a dimer. We thereby assign each collision to a ``basin" defined by which atom emerges alone.
 
 We have tried a variety of numerical integrators and have found that variable step-size integrators such as $\texttt{DOP853}$ perform reasonably. We have varied the maximum step size to ensure our results are convergent, which was tested by doubling the maximum step size and making sure that none of the collision statistics changed. The figures presented below are all based on parameter choices that satisfied this condition. To check the dependence of the collision on infinitesimal changes to, e.g., the dimer initial angle we have also written code which runs two collisions differing only by a small variation in this initial angle. As is described below, this is a useful way to test for the emergence of chaotic behavior in the system. When necessary, we have run this code on the Odyssey computing cluster in order to speed up evaluation time for the large numbers of averages we computed in the results below.
 
@@ -197,12 +199,12 @@ The results for $\mathrm{Li} + \mathrm{Li_2}$ at $T = 350~\mathrm{K}$ are summar
 }
 \end{figure}
 
-The fractal dimension~\cite{mandelbrot1967} characterizes how much the fractal pattern changes as one changes the scale of the system, so it is a way to quantify the scale invariance and, as we shall see, also the moment of onset of chaos. We following the so-called ``uncertainty algorithm" to define the fractal dimension, $d$~\cite{mcdonald1985}. As already discussed, we classify trajectories by the "basin" they end up in. A trajectory is further classified as unstable under perturbation of initial conditions if by changing the initial variables by a value $\delta$ the outcome ends being part of a different basin than the original one. As such, we compute a large number of pairs of trajectories, where the pairs differ only in that $\theta$ is changed by an amount $\delta$. We then compute the fraction of unstable trajectories, which is observed to be characterized by
+The fractal dimension~\cite{mandelbrot1967} characterizes how much the fractal pattern changes as one changes the scale of the system, so it is a way to quantify the scale invariance and, as we shall see, also the moment of onset of chaos. We follow the so-called ``uncertainty algorithm" to define the fractal dimension, $d$~\cite{mcdonald1985}. As already discussed, we classify trajectories by the ``basin" they end up in. A trajectory is further classified as unstable under perturbation of initial conditions if by changing the initial variables by a value $\delta$ the outcome ends being part of a different basin than the original one. As such, we compute a large number of pairs of trajectories, where the pairs differ only in that $\theta$ is changed by an amount $\delta$. We then compute the fraction of unstable trajectories, which is observed to be characterized by
 
 \begin{equation}
 f(\delta, E_{\mathrm{col}}) \propto \delta^{\alpha(E_{\mathrm{col}})},
 \end{equation}
-where $E_{\mathrm{col}}$ is the collision energy, $\delta$ is the perturbation we apply (to the angle $\theta$), and $\alpha$ is the uncertainty exponent that we fit~\cite{mcdonald1985}. Figure~\ref{fig:unc} illustrates some of the results for a wide range of temperatures, from which we can conclude that at high collision energies the trajectories are essentially stable under perturbation, with the unstable fraction decreasing as $\delta$ gets smaller, while for lower collision energies the unstable fraction is essentially independent of $\delta$, meaning that there is no correlation between the outcomes of trajectories that are arbitrarily closely ``neighboring" in the phase space of initial conditions. We can again interpret this as saying that during such a collision the energy is constantly redistributed between the constituent atoms randomly, destroying any correlation with the initial conditions.
+where $E_{\mathrm{col}}$ is the collision energy, $\delta$ is the perturbation we apply (to the angle $\theta$), and $\alpha$ is the uncertainty exponent that we fit~\cite{mcdonald1985}. Fig.~\ref{fig:unc} illustrates some of the results for a wide range of temperatures, from which we can conclude that at high collision energies the trajectories are essentially stable under perturbation, with the unstable fraction decreasing as $\delta$ gets smaller, while for lower collision energies the unstable fraction is essentially independent of $\delta$, meaning that there is no correlation between the outcomes of trajectories that are arbitrarily closely ``neighboring" in the phase space of initial conditions. We can again interpret this as saying that during such a collision the energy is constantly redistributed between the constituent atoms randomly, destroying any correlation with the initial conditions.
 
 \begin{figure}[ht]
 \begin{center}
@@ -236,13 +238,13 @@ As in~\cite{bohn2014,mcdonald1985}, we can relate $\alpha$ to the fractal dimens
 
 \subsection{\label{sec:RRKM-overview} Overview}
 
-On a semi-classical level, quantum scattering can be viewed as classical particles sampling the discrete quantum modes of the potential energy surface over the course of the encounter. Incoming particles collide and accelerate into the potential well, where the potential energy is converted into rotational and vibrational energies of the molecular complex. This is in contrast to the pure classical approach in the previous section, where states within the potential well are not quantized. 
+On a semi-classical level, quantum scattering can be viewed as classical particles sampling the discrete quantum modes of the potential energy surface over the course of the encounter until the particles find their way out again. Incoming particles collide and fall into the potential well, where the potential energy is distributed into rotational and vibrational energies of the molecular complex. This is in contrast to the pure classical approach in the previous section, where states within the potential well are not quantized. 
 
 In this picture, the Rice-Ramsperger-Kassel-Marcus (RRKM) theory~\cite{marcus1952-1,marcus1952-2} from chemistry suggests that the lifetime of a complex can be approximated as 
 \al{
 \tau_{dos} = \frac{2\pi\hbar\rho}{N_0}\label{eqn:rrkm}
 }
-where $\rho$ is the density of states (DOS) of the potential energy surface at the collision energy, and $N_0$ the number of open channels. Intuitively, this approximation assumes that over the course of the reaction, the collision complex samples all possible states over the potential energy surface. At high temperatures, $N_0$ may in general be large, and the lifetime is expected to be short. At ultracold temperatures however, the number of quantum states available to the collision is limited to a few, and we can even have $N_0=1$, giving experimentally observable lifetimes. Moreover, this can be compared to the classical approach, which serves as a foil for both theories.
+where $\rho$ is the density of states (DOS) of the potential energy surface at the collision energy, and $N_0$ the number of open channels. At high temperatures, $N_0$ may in general be large, and the lifetime is expected to be short. At ultracold temperatures however, the number of quantum states available to the collision is limited to a few, and we can even have $N_0=1$, giving experimentally observable lifetimes. 
 
 While equation (\ref{eqn:rrkm}) is based on semi-classical grounds, the DOS of the energy spectrum must be found through quantum mechanical means. This involves solving for the bound states of the single channel Schrodinger equation. To this end, we utilize the mapped Fourier grid Hamiltonian (FGH) method \cite{clay1989,fattal1996}, which is well-suited for finding bound states of molecular potentials.
 
@@ -261,7 +263,7 @@ H = \hat{T} + V(\hat{x}) = \frac{\hat{p}^2}{2m} + V(\hat{x})
 }
 In particular, we are interested in bound states of this system, which are given by the condition $E<0$.
 
-The potential energy is diagonal in the coordinate basis, whereas the kinetic energy is diagonal in momentum space basis, i.e.
+We know that the potential energy is diagonal in the coordinate basis, whereas the kinetic energy is diagonal in momentum space basis, i.e.
 \al{
 \bracket{x}{V}{x'} &&= V(x)\delta(x-x')\\
 \bracket{k}{T}{k'} &&= \frac{\hbar^2 k^2}{2m}\delta(k-k')
@@ -280,11 +282,12 @@ To begin with, we write out the matrix elements of the Hamiltonian exactly in th
 &&=\int_{-\infty}^\infty\braket{x}{k}T\braket{k}{x'}dk + V(x)\delta(x-x')\nonumber 
 \\ &&= \frac{1}{2\pi}\int_{-\infty}^\infty e^{ikx}T_ke^{-ikx'}dk + V(x)\delta(x-x')\label{eqn:fgh-continuous} \\
 }
-where we have defined 
+where we define
 \al{
 T_k=\frac{\hbar^2k^2}{2m}
 } 
-and used the relation
+and use
+ the relation
 \al{
 \braket{k}{x}=\frac{1}{\sqrt{2\pi}}e^{-ikx}
 }
@@ -322,19 +325,19 @@ be a basis vector in position space, then the n-th column of the Hamiltonian can
 \al{
 H_{in} = [(\mathcal{F}^{-1}T\mathcal{F}+V)\phi_n]_i
 }
-where $\mathcal{F}$ is the Fourier transform operator and $T$ is the diagonal operator $\diag{T_{k_l}}$. This equation is equivalent to equation (\ref{eqn:fgh-discrete}), but explicitly shows the use of the Fourier transform into momentum space. One of the advantages of this method is that the Fourier transform can be completed efficiently by means of the discrete fast Fourier transform (DFFT).
+where $\mathcal{F}$ is the Fourier transform operator and $T$ is the diagonal operator $\diag\{T_{k_l}\}$. This equation is equivalent to equation (\ref{eqn:fgh-discrete}), but explicitly shows the use of the Fourier transform into momentum space. One of the advantages of this method is that the Fourier transform can be completed efficiently by means of the discrete fast Fourier transform (DFFT).
 
-In principle, from here we may diagonalize this Hamiltonian to obtain the energy values and wavefunctions we desire. The FGH method presented as is however, can only be implemented on an evenly spaced grid. This can be problematic with many potentials of interest in atomic and molecular physics, where potentials consist of a small potential well region that then asymptotes to zero at large distances. In the potential well, the wavefunction oscillates rapidly, whereas it decays exponentially in the classically forbidden region. Since rapid oscillations correspond to large momentum, and large momentum range requires small grid spacing in position space, one would optimally hope to have a denser grid in the potential well than in the classically forbidden region.
+In principle, from here we may diagonalize this Hamiltonian to obtain the energy values and wavefunctions we desire. The FGH method presented as is however, can only be implemented on an evenly spaced grid. This can be problematic with many potentials of interest in atomic and molecular physics, where potentials consist of a small potential well region that then asymptotes to zero at large distances. The wavefunction oscillates rapidly in the potential well region but decays exponentially in the classically forbidden region. Since rapid oscillations correspond to large momentum, and large momentum range requires small grid spacing in position space, one would optimally hope to have a dense grid in the potential well and a sparse one in the classically forbidden region.
 
-This can be achieved by taking a nonlinear mapping from original coordinates $(x)$ to a new set of coordinates $(Q)$. The representation of the kinetic energy term in position basis is given as 
+This can be achieved by taking a nonlinear mapping from original coordinates $(x)$ to a new set of coordinates $(Q)$. The representation of the kinetic energy term in position basis is then given as 
 \al{
 T = -\frac{\hbar^2}{2m}\left(J^{-1}(Q)\frac{\partial}{\partial Q}\right)^2
 }
-where $J=\frac{\partial x}{\partial Q}$. This term can then be found from position space by taking two Fourier transform and inverse Fourier transform pairs in sequence. 
+where $J=\frac{\partial x}{\partial Q}$. To evaluate the matrix element of this in position space, we take two Fourier transform and inverse Fourier transform pairs in sequence. 
 \al{
 H_{in} = [(J^{-1}\mathcal{F}^{-1}\sqrt{T}\mathcal{F}J^{-1}\mathcal{F}^{-1}\sqrt{T}\mathcal{F}+V)\phi_n]_i
 }
-where we have used $\sqrt{T}$ to denote $\diag{\sqrt{T_{k_l}}}$. This gives the mapped FGH method, which typically performs much better in convergence compared to its even grid counterpart.
+where we have used $\sqrt{T}$ to denote $\diag\{\sqrt{T_{k_l}}\}$. This gives the mapped FGH method, which typically performs much better in convergence compared to its even grid counterpart.
 
 The mapping 
 \al{
@@ -344,18 +347,28 @@ where $A,\beta$ are parameters that can be optimized, turns out to have nice pro
 
 \begin{figure}
 \includegraphics{figures/mapping}
-\caption{\label{fig:mapping}Mapping of coordinates $x = Q-A\arctan(\beta Q)$, where $A=2000, \beta = 1/2020$}. The grid gives a denser sampling for small distances than at large distances as desired.
+\caption{\label{fig:mapping}Mapping of coordinates $x = Q-A\arctan(\beta Q)$, where $A=2000, \beta = 1/2020$. The grid gives a denser sampling for small distances than at large distances as desired.}
 \end{figure}
 
-\subsection{Density of states and lifetime}
+\subsubsection{{\label{sec:fgh-psa}}Convergence}
 
-To find the density of states relevant for applying RRKM theory, we need to consider the bound states that arise from both the long range atom+dimer collision and the short range atom+atom interactions that form dimers. In both these cases, the potential in the radial part of Schrodinger's equation can be approximated as a Lennard-Jones potential of the form
+In order for the FGH method to converge properly, the phase space enclosed by the grid should need to cover the classically allowed region. This is depicted in Fig.~\ref{fig:psa}. The contours show increasingly larger energy values; we see that for energy values close to $0$ a pear shape appearance emerges. Thus, to obtain accurate results near threshold, we need to sample sufficiently far in position space. Since an energy of $1$K corresponds to $3.2\times 10^{-6}$a.u., an error of $<10^{-7}$ suffices for the present purposes of evaluating the DOS (see Sec.~\ref{sec:dos}).
+
+\begin{figure}
+\includegraphics{figures/psa}
+\caption{\label{fig:psa}Contour plot of the Hamiltonian with the Lennard-Jones potential for Li+Li in mapped phase space.The energy levels in phase space give a rough idea for the grid bounds necessary to achieve convergence. The contours represent energy levels of $E = -10^{-m}$ a.u. for $m=1,\cdots,8$.}
+\end{figure}
+
+
+\subsection{\label{sec:dos}Density of states and lifetime}
+
+To find the density of states relevant for applying RRKM theory, we need to consider the bound states that arise from both the long range atom + dimer collision and the short range atom + atom interactions that form dimers. In both these cases, the potential can be approximated as a Lennard-Jones potential of the form
 \al{
 V^{(L)}_{LJ}(R) = \frac{C_{12}}{R^{12}} - \frac{C_6}{R^6} + \frac{L(L+1)}{2\mu R^2}
 }
 where $L$ denotes the partial wave number (more details in Sec.~\ref{sec:QuantumTraj}).
 
-For the short range dimer states, the $C_{6,A_2}$ and $D_{e,A_2}$ values are taken as in Table~\ref{table:coeffs}. Each of the ro-vibrational bound states of this potential gives an atom+dimer collision channel. We label the energy for each of these ro-vibrational states as $E_{v,n}$, where $v,n$ denote the vibrational and rotational number respectively. An example of this is given in Fig.~\ref{fig:li_dimer_wavefunctions}.
+For the short range dimer states, the $C_{6,A_2}$ and $D_{e,A_2}$ values are taken as in Table~\ref{table:coeffs}. Each of the ro-vibrational bound states of this potential gives an atom + dimer collision channel. We label the energy for each of these ro-vibrational states as $E_{v,n}$, where $v,n$ denote the vibrational and rotational number respectively. An example of this is given in Fig.~\ref{fig:li_dimer_wavefunctions} for the Li+Li dimer.
 
 \begin{figure}
 \includegraphics{figures/li_li_n0_wavefunctions}
@@ -376,17 +389,17 @@ We note that conservation of angular momentum requires that $\ve{J}=\ve{L}+\ve{n
 
 At ultracold temperatures, the incoming/outgoing channel is restricted to the rovibrational ground state $\nu = 0, n = 0$. To find the DOS around this energy level, we count the average number of states within a given energy interval.
 
-Fig.~\ref{fig:dos} summarizes the process of finding the energy spectrum. In our implementation, we take $J=0$ (corresponding to vanishing impact parameter $b=0$ classically) and $M=M_L+m_n=0$. We list our results of the DOS and corresponding complex lifetime as computed from Eq.~\ref{eqn:rrkm} in Table~\ref{tab:dos}. We find that the results agree with those obtained from the classical trajectories to within a factor of 2. This is remarkable, as it suggests that the classical approach is sufficient for certain observables of interest. 
+Fig.~\ref{fig:dos} summarizes the process of finding the energy spectrum. In our implementation, we take $J=0$ (corresponding to vanishing impact parameter $b=0$ classically) and $M=M_L+m_n=0$. We list our results of the DOS and corresponding complex lifetime as computed from Eq.~\ref{eqn:rrkm} in Table~\ref{tab:dos}. These numbers are sufficiently to be experimentally observable.
 
 \begin{table}[b]
 \caption{\label{tab:dos}Density of states}
 \begin{ruledtabular}
 \begin{tabular}{cccc}
- Atom species & DOS [$\text{mK}^{-1}$] & $\tau_{dos}$ [ns] & $\tau_\text{classical}$ [ns]\\ 
+ Atom species & DOS [$\text{mK}^{-1}$] & $\tau_{dos}$ [ns] \\
 \hline
-Li & 0.06 & 2.8 & dd \\
-K & 2.52 & 120 & dd \\
-Cs & 32.15 & 1542 & dd
+Li & 0.06 & 2.8   \\
+K & 2.52 & 120  \\
+Cs & 32.15 & 1542 
 \end{tabular}
 \end{ruledtabular}
 \end{table}
@@ -628,7 +641,22 @@ A simple estimate shows that, even at temperatures $\leq 1$ K, over 100 internal
 
 The field of ultracold atomic and molecular collisions is still, at least experimentally, in its infancy. Theoretical studies have so far outpaced experimental results due to the difficulty in producing samples of ultracold molecules. However, the past decade has seen tremendous progress on the experimental front and within the past two years, tens of species of ultracold molecules have been observed in the lab. A vibrant experiment-theory interplay can therefore be expected to grow stronger in the coming years: experimentalists can finally test the predictions of theorists, and theorists can continue pointing the way toward new and interesting physics. The future of atomic and molecular collisions is therefore quite bright.
 
+
+
+\appendix
+
+\section{List of written code}
+\begin{itemize}
+\item{fgh.py: solves the Schrodinger equation using the mapped FGH method}
+\item{compute-energy-levels.ipynb: iPython that computes the energy levels for all atom species and angular momentum used in paper}
+\item{compute-dos.ipynb: iPython notebook that computes the DOS from the computed energy levels}
+\item{phase-space-analysis.ipynb: iPython notebook that analyzes and optimizes FGH mapping parameters using the phase space analysis approach}
+\item{constants.py: contains relevant physical constants}
+\end{itemize}
+
+
 \bibliography{WriteupFinal}% Produces the bibliography via BibTeX.
+
 
 \end{document}
 %

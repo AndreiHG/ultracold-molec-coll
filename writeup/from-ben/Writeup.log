@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2017.10.6)  18 DEC 2017 04:58
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2017.10.6)  18 DEC 2017 08:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -369,81 +369,81 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 <schematic.pdf, id=24, 722.7pt x 542.025pt>
 File: schematic.pdf Graphic file (type pdf)
  <use schematic.pdf>
-Package pdftex.def Info: schematic.pdf used on input line 135.
+Package pdftex.def Info: schematic.pdf used on input line 137.
 (pdftex.def)             Requested size: 246.0pt x 184.50108pt.
 
-Overfull \hbox (3.08331pt too wide) in paragraph at lines 135--136
+Overfull \hbox (3.08331pt too wide) in paragraph at lines 137--138
  [][] 
  []
 
 <LJ.pdf, id=26, 433.62pt x 289.08pt>
 File: LJ.pdf Graphic file (type pdf)
  <use LJ.pdf>
-Package pdftex.def Info: LJ.pdf used on input line 139.
+Package pdftex.def Info: LJ.pdf used on input line 141.
 (pdftex.def)             Requested size: 246.0pt x 164.00096pt.
 
-Overfull \hbox (3.08331pt too wide) in paragraph at lines 139--140
+Overfull \hbox (3.08331pt too wide) in paragraph at lines 141--142
  [][] 
  []
 
 <Col100K.pdf, id=28, 464.42258pt x 463.8561pt>
 File: Col100K.pdf Graphic file (type pdf)
  <use Col100K.pdf>
-Package pdftex.def Info: Col100K.pdf used on input line 153.
+Package pdftex.def Info: Col100K.pdf used on input line 155.
 (pdftex.def)             Requested size: 209.1015pt x 208.84656pt.
 
 <Col10K.pdf, id=30, 464.42258pt x 463.8561pt>
 File: Col10K.pdf Graphic file (type pdf)
  <use Col10K.pdf>
-Package pdftex.def Info: Col10K.pdf used on input line 157.
+Package pdftex.def Info: Col10K.pdf used on input line 159.
 (pdftex.def)             Requested size: 209.1015pt x 208.84656pt.
 
 <Col1K.pdf, id=32, 464.42258pt x 463.8561pt>
 File: Col1K.pdf Graphic file (type pdf)
  <use Col1K.pdf>
-Package pdftex.def Info: Col1K.pdf used on input line 161.
+Package pdftex.def Info: Col1K.pdf used on input line 163.
 (pdftex.def)             Requested size: 209.1015pt x 208.84656pt.
 
 
-LaTeX Warning: Float too large for page by 21.78967pt on input line 165.
+LaTeX Warning: Float too large for page by 21.78967pt on input line 167.
 
 [3 <./schematic.pdf> <./LJ.pdf>]
 
 LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
- on input line 169.
+ on input line 171.
 
 <lifetime.pdf, id=98, 433.62pt x 289.08pt>
 File: lifetime.pdf Graphic file (type pdf)
  <use lifetime.pdf>
-Package pdftex.def Info: lifetime.pdf used on input line 174.
+Package pdftex.def Info: lifetime.pdf used on input line 176.
 (pdftex.def)             Requested size: 270.6015pt x 180.40988pt.
 
-Overfull \hbox (24.6015pt too wide) in paragraph at lines 174--175
+Overfull \hbox (24.6015pt too wide) in paragraph at lines 176--177
  [] 
  []
 
 [4 <./Col100K.pdf> <./Col10K.pdf> <./Col1K.pdf>]
 
 LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
- on input line 184.
+ on input line 186.
 
 <fractal_big.pdf, id=190, 722.7pt x 505.89pt>
 File: fractal_big.pdf Graphic file (type pdf)
  <use fractal_big.pdf>
-Package pdftex.def Info: fractal_big.pdf used on input line 190.
+Package pdftex.def Info: fractal_big.pdf used on input line 192.
 (pdftex.def)             Requested size: 270.6015pt x 189.42265pt.
 
-Overfull \hbox (27.68481pt too wide) in paragraph at lines 190--191
+Overfull \hbox (27.68481pt too wide) in paragraph at lines 192--193
  [][] 
  []
 
 <fractal_zoomed.pdf, id=192, 722.7pt x 505.89pt>
 File: fractal_zoomed.pdf Graphic file (type pdf)
  <use fractal_zoomed.pdf>
-Package pdftex.def Info: fractal_zoomed.pdf used on input line 194.
+Package pdftex.def Info: fractal_zoomed.pdf used on input line 196.
 (pdftex.def)             Requested size: 270.6015pt x 189.42265pt.
 
-Overfull \hbox (27.68481pt too wide) in paragraph at lines 194--196
+Overfull \hbox (27.68481pt too wide) in paragraph at lines 196--198
  [][][] 
  []
 
@@ -454,20 +454,20 @@ th page group included in a single page
 >] <uncertainty.pdf, id=308, 722.7pt x 505.89pt>
 File: uncertainty.pdf Graphic file (type pdf)
  <use uncertainty.pdf>
-Package pdftex.def Info: uncertainty.pdf used on input line 209.
+Package pdftex.def Info: uncertainty.pdf used on input line 211.
 (pdftex.def)             Requested size: 276.75pt x 193.72229pt.
 
-Overfull \hbox (30.75pt too wide) in paragraph at lines 209--210
+Overfull \hbox (30.75pt too wide) in paragraph at lines 211--212
  [] 
  []
 
 <fractal_dim.pdf, id=309, 650.43pt x 433.62pt>
 File: fractal_dim.pdf Graphic file (type pdf)
  <use fractal_dim.pdf>
-Package pdftex.def Info: fractal_dim.pdf used on input line 220.
+Package pdftex.def Info: fractal_dim.pdf used on input line 222.
 (pdftex.def)             Requested size: 276.75pt x 184.5011pt.
 
-Overfull \hbox (30.75pt too wide) in paragraph at lines 220--221
+Overfull \hbox (30.75pt too wide) in paragraph at lines 222--223
  [] 
  []
 
@@ -478,43 +478,52 @@ pdfTeX warning: pdflatex (file ./fractal_dim.pdf): PDF inclusion: multiple pdfs
 >] [7]
 
 Package natbib Warning: Citation `fattel1996' on page 8 undefined on input line
- 343.
+ 346.
 
 <figures/mapping.pdf, id=388, 240.9pt x 160.6pt>
 File: figures/mapping.pdf Graphic file (type pdf)
  <use figures/mapping.pdf>
-Package pdftex.def Info: figures/mapping.pdf used on input line 346.
+Package pdftex.def Info: figures/mapping.pdf used on input line 349.
 (pdftex.def)             Requested size: 240.8994pt x 160.5996pt.
 
-<figures/li_li_n0_wavefunctions.pdf, id=389, 240.9pt x 160.6pt>
+<figures/psa.pdf, id=389, 240.9pt x 160.6pt>
+File: figures/psa.pdf Graphic file (type pdf)
+ <use figures/psa.pdf>
+Package pdftex.def Info: figures/psa.pdf used on input line 358.
+(pdftex.def)             Requested size: 240.8994pt x 160.5996pt.
+
+<figures/li_li_n0_wavefunctions.pdf, id=390, 240.9pt x 160.6pt>
 File: figures/li_li_n0_wavefunctions.pdf Graphic file (type pdf)
 
 <use figures/li_li_n0_wavefunctions.pdf>
 Package pdftex.def Info: figures/li_li_n0_wavefunctions.pdf used on input line 
-361.
+374.
 (pdftex.def)             Requested size: 240.8994pt x 160.5996pt.
+ [8 <./figures/mapping.pdf> <./figures/psa.pdf
 
-<figures/dos.pdf, id=390, 200.75pt x 150.5625pt>
-File: figures/dos.pdf Graphic file (type pdf)
- <use figures/dos.pdf>
-Package pdftex.def Info: figures/dos.pdf used on input line 372.
-(pdftex.def)             Requested size: 200.7495pt x 150.56212pt.
-
-Underfull \hbox (badness 1178) in paragraph at lines 377--378
-[]\OT1/cmr/m/n/10 At ul-tra-cold tem-per-a-tures, the in-com-ing/outgoing
- []
-
-[8 <./figures/mapping.pdf> <./figures/li_li_n0_wavefunctions.pdf
-
-pdfTeX warning: pdflatex (file ./figures/li_li_n0_wavefunctions.pdf): PDF inclu
-sion: multiple pdfs with page group included in a single page
+pdfTeX warning: pdflatex (file ./figures/psa.pdf): PDF inclusion: multiple pdfs
+ with page group included in a single page
 >]
 
 LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
- on input line 380.
+ on input line 383.
 
-[9 <./figures/dos.pdf>] [10]
-Underfull \hbox (badness 1163) in paragraph at lines 524--525
+<figures/dos.pdf, id=560, 200.75pt x 150.5625pt>
+File: figures/dos.pdf Graphic file (type pdf)
+ <use figures/dos.pdf>
+Package pdftex.def Info: figures/dos.pdf used on input line 385.
+(pdftex.def)             Requested size: 200.7495pt x 150.56212pt.
+
+Underfull \hbox (badness 1178) in paragraph at lines 390--391
+[]\OT1/cmr/m/n/10 At ul-tra-cold tem-per-a-tures, the in-com-ing/outgoing
+ []
+
+[9 <./figures/li_li_n0_wavefunctions.pdf> <./figures/dos.pdf
+
+pdfTeX warning: pdflatex (file ./figures/dos.pdf): PDF inclusion: multiple pdfs
+ with page group included in a single page
+>] [10] [11]
+Underfull \hbox (badness 1163) in paragraph at lines 537--538
 \OT1/cmr/m/n/10 where $\OT1/cmr/bx/n/10 u[] \OT1/cmr/m/n/10 = \OT1/cmr/bx/n/10 
 W\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ;   n \
 OT1/cmr/m/n/10 = 0\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 2\OML/cmm/m/it/10 ; \OT1/c
@@ -522,46 +531,58 @@ mr/m/n/10 4\OML/cmm/m/it/10 ; :::N$ \OT1/cmr/m/n/10 and $\OT1/cmr/bx/n/10 u[] \
 OT1/cmr/m/n/10 =
  []
 
-[11] <./Results/LogDerivErrorScaling.pdf, id=596, 651.75685pt x 444.50255pt>
+<./Results/LogDerivErrorScaling.pdf, id=652, 651.75685pt x 444.50255pt>
 File: ./Results/LogDerivErrorScaling.pdf Graphic file (type pdf)
 
 <use ./Results/LogDerivErrorScaling.pdf>
 Package pdftex.def Info: ./Results/LogDerivErrorScaling.pdf used on input line 
-544.
+557.
 (pdftex.def)             Requested size: 246.0pt x 167.77324pt.
-
-Underfull \hbox (badness 2875) in paragraph at lines 572--573
+ [12 <./Results/LogDerivErrorScaling.pdf>]
+Underfull \hbox (badness 2875) in paragraph at lines 585--586
 \OT1/cmr/m/n/10 where $\OML/cmm/m/it/10 V[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 
 C[]e[] \OT1/cmr/m/n/10 + (\OML/cmm/m/it/10 C[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/
 10 rC[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 e[] \OMS/cmsy/m/n/10 ^^@
  []
 
-[12 <./Results/LogDerivErrorScaling.pdf>]
-<./Results/AtomAtomVersusE.pdf, id=647, 632.15236pt x 443.98499pt>
+<./Results/AtomAtomVersusE.pdf, id=703, 632.15236pt x 443.98499pt>
 File: ./Results/AtomAtomVersusE.pdf Graphic file (type pdf)
 
 <use ./Results/AtomAtomVersusE.pdf>
-Package pdftex.def Info: ./Results/AtomAtomVersusE.pdf used on input line 601.
+Package pdftex.def Info: ./Results/AtomAtomVersusE.pdf used on input line 614.
 (pdftex.def)             Requested size: 246.0pt x 172.77406pt.
 
-<./Results/AtomAtomVersusL.pdf, id=648, 632.15236pt x 443.98499pt>
+<./Results/AtomAtomVersusL.pdf, id=704, 632.15236pt x 443.98499pt>
 File: ./Results/AtomAtomVersusL.pdf Graphic file (type pdf)
 
 <use ./Results/AtomAtomVersusL.pdf>
-Package pdftex.def Info: ./Results/AtomAtomVersusL.pdf used on input line 607.
+Package pdftex.def Info: ./Results/AtomAtomVersusL.pdf used on input line 620.
 (pdftex.def)             Requested size: 246.0pt x 172.77406pt.
- [13 <./Results/AtomAtomVersusE.pdf> <./Results/AtomAtomVersusL.pdf
+ [13 <./Results/AtomAtomVersusE.pdf>]
 
-pdfTeX warning: pdflatex (file ./Results/AtomAtomVersusL.pdf): PDF inclusion: m
-ultiple pdfs with page group included in a single page
->] <./Results/ICSandPartialWaves.pdf, id=735, 677.61911pt x 443.98499pt>
+LaTeX Warning: A float is stuck (cannot be placed); try class option [floatfix]
+ on input line 626.
+
+<./Results/ICSandPartialWaves.pdf, id=748, 677.61911pt x 443.98499pt>
 File: ./Results/ICSandPartialWaves.pdf Graphic file (type pdf)
 
 <use ./Results/ICSandPartialWaves.pdf>
-Package pdftex.def Info: ./Results/ICSandPartialWaves.pdf used on input line 61
-5.
+Package pdftex.def Info: ./Results/ICSandPartialWaves.pdf used on input line 62
+8.
 (pdftex.def)             Requested size: 246.0pt x 161.18262pt.
- (./Writeup.bbl [14 <./Results/ICSandPartialWaves.pdf>])
+ [14 <./Results/AtomAtomVersusL.pdf> <./Results/ICSandPartialWaves.pdf
+
+pdfTeX warning: pdflatex (file ./Results/ICSandPartialWaves.pdf): PDF inclusion
+: multiple pdfs with page group included in a single page
+>]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 650.
+
+ (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 650.
+ (./Writeup.bbl)
 
 Package natbib Warning: There were undefined citations.
 
@@ -571,13 +592,13 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 5547 strings out of 495028
- 77343 string characters out of 6181497
- 174266 words of memory out of 5000000
- 8639 multiletter control sequences out of 15000+600000
+ 5573 strings out of 495028
+ 77763 string characters out of 6181497
+ 165914 words of memory out of 5000000
+ 8661 multiletter control sequences out of 15000+600000
  17663 words of font info for 66 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 38i,11n,38p,2458b,357s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,11n,38p,2182b,357s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texli
@@ -603,10 +624,10 @@ cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti
 hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/t
 exlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/te
 xlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on Writeup.pdf (15 pages, 986040 bytes).
+Output written on Writeup.pdf (15 pages, 1024291 bytes).
 PDF statistics:
- 868 PDF objects out of 1000 (max. 8388607)
- 355 compressed objects within 4 object streams
+ 924 PDF objects out of 1000 (max. 8388607)
+ 392 compressed objects within 4 object streams
  0 named destinations out of 1000 (max. 500000)
- 128 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 133 words of extra memory for PDF output out of 10000 (max. 10000000)
 
