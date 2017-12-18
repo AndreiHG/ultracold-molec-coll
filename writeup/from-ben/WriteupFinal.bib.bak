@@ -1,0 +1,174 @@
+% This file was created with JabRef 2.10.
+% Encoding: MacRoman
+
+
+@Article{Connolly2013,
+  Title                    = {Spin-Orbit Suppression of Cold Inelastic CCollision of Aluminum and Helium},
+  Author                   = {Connolly, C. B. and Au, Y. S. and Chae, E. and Tscherbul, T. V. and Buchachenko, A. A. and Lu, H.-I. and Ketterle, W. and Doyle, J. M.},
+  Journal                  = {Phys. Rev. Lett.},
+  Year                     = {2013},
+  Number                   = {173202},
+  Volume                   = {110},
+
+  Owner                    = {Ben},
+  Timestamp                = {2017.12.17}
+}
+
+@Article{Connolloy2010,
+  Title                    = {Large spin-relaxation rates in trapped submerged-shell atoms},
+  Author                   = {Connolly, C. B. and Au, Y. S. and Doret, S. C. and Ketterle, W. and Doyle, J. M.},
+  Journal                  = {Phys. Rev. A},
+  Year                     = {2010},
+  Number                   = {010702(R)},
+  Volume                   = {81},
+
+  Owner                    = {Ben},
+  Timestamp                = {2017.12.17}
+}
+
+@Book{DiracTextbook,
+  Title                    = {The Principles of Quantum Mechanics},
+  Author                   = {Dirac, P. A. M.},
+  Publisher                = {Oxford Univ. Press},
+  Year                     = {1935},
+
+  Owner                    = {Ben},
+  Timestamp                = {2017.12.17}
+}
+
+@Article{Friedman95,
+  Title                    = {On Johnson's log-derivative algorithm for a single equation},
+  Author                   = {Friedman, R. S. and Jamieson, M. J.},
+  Journal                  = {Computer Physics Communications},
+  Year                     = {1995},
+  Number                   = {2},
+  Pages                    = {231-238},
+  Volume                   = {85},
+
+  Owner                    = {Ben},
+  Timestamp                = {2017.12.17}
+}
+
+@Article{Johnson73,
+  Title                    = {The Multichannel Log-Derivative Method for Scattering Calculations},
+  Author                   = {Johnson, B.},
+  Journal                  = {Journal of Computational Physics},
+  Year                     = {1973},
+  Pages                    = {445-449},
+  Volume                   = {13},
+
+  Owner                    = {Ben},
+  Timestamp                = {2017.12.17}
+}
+
+@Article{JohnsonNumerov,
+  Title                    = {New numerical mmethod applied to solving the one-dimensional eigenvalue problem},
+  Author                   = {Johnson, B. R.},
+  Journal                  = {The Journal of Chemical Physics},
+  Year                     = {1977},
+  Number                   = {4086},
+  Volume                   = {67},
+
+  Owner                    = {Ben},
+  Timestamp                = {2017.12.17}
+}
+
+@Book{ColdChemBook,
+  Title                    = {Cold Chemistry: Molecular Scattering and Reactivity Near Absolute Zero},
+  Author                   = {Klos, Jacek and Lique, Francois},
+  Editor                   = {Dulieu, Olivier and Osterwalder, Andreas},
+  Publisher                = {Royal Society of Chemistry},
+  Year                     = {2018},
+
+  Owner                    = {Ben},
+  Timestamp                = {2017.12.17}
+}
+
+@Book{Krems2017,
+  Title                    = {Molecules in electromagnetic fields},
+  Author                   = {Krems, Roman V.},
+  Publisher                = {John Wiley \& Sons, Inc.},
+  Year                     = {2017},
+
+  Owner                    = {Ben},
+  Timestamp                = {2017.12.17}
+}
+
+@Article{ManJohnsonRederived,
+  Title                    = {Joatoms's Log-Derivative Algorithm Rederived},
+  Author                   = {Manolopoulos, D. E. and Jamieson, M. J. and Pradhan, A. D.},
+  Journal                  = {Journal of Computational Physics},
+  Year                     = {1993},
+  Number                   = {1},
+  Pages                    = {169-172},
+  Volume                   = {105},
+
+  Owner                    = {Ben},
+  Timestamp                = {2017.12.17}
+}
+
+@Article{OlsonSmith71,
+  Title                    = {Collision Spectroscopy. IV. Semiclassical Theory of Inelastic Scattering with Applications to He + Ne},
+  Author                   = {Olson, R. E. and Smith, F. T.},
+  Journal                  = {Phys. Rev. A},
+  Year                     = {1971},
+
+  Month                    = {May},
+  Number                   = {5},
+  Volume                   = {3},
+
+  Owner                    = {Ben},
+  Timestamp                = {2017.12.17}
+}
+
+@Article{SchrodPaper1926,
+  Author                   = {Schrodinger, E.},
+  Journal                  = {Ann. of Phys.},
+  Year                     = {1926},
+  Number                   = {79},
+  Pages                    = {489},
+  Volume                   = {4},
+
+  Owner                    = {Ben},
+  Timestamp                = {2017.12.17}
+}
+
+@Article{Tscherbul2010,
+  Title                    = {Collisional properties of cold spin-polarized nitrogen gas: Theory, experiment,
+and prospects as a sympathetic coolant for trapped atoms and molecules},
+  Author                   = {Tscherbul, T. V. and Klos, J. and Dalgarno, A. and Zygelman, B. and Pavlovic, Z. and Hummon, M. T. and Lu, H.-I. and Tsikata, E. and Doyle, J. M.},
+  Journal                  = {Phys. Rev. A},
+  Year                     = {2010},
+
+  Owner                    = {Ben},
+  Timestamp                = {2017.12.17}
+}
+
+@Manual{MOLPRO,
+  Title                    = {MOLPRO User's Manual},
+  Author                   = {Werner, H.-J. and Knowles, P. J.},
+
+  Owner                    = {Ben},
+  Timestamp                = {2017.12.18}
+}
+
+@Book{ColdMolsBook,
+  Title                    = {Cold Molecules: Theory, Experiment, Applications},
+  Editor                   = {Krems, R. V. and Friedric, B. and Stwalley, W. C.},
+  Publisher                = {CRC Press},
+  Year                     = {2009},
+
+  Owner                    = {Ben},
+  Timestamp                = {2017.12.17}
+}
+
+@Book{QuantumScatteringTextbook,
+  Title                    = {Quantum Scattering Theory},
+  Editor                   = {Ross, M.},
+  Publisher                = {Indiana U. Press},
+  Year                     = {1963},
+
+  Owner                    = {Ben},
+  Timestamp                = {2017.12.17}
+}
+
