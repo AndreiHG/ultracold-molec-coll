@@ -62,14 +62,16 @@
 %%height=10in,a5paper,hmargin={3cm,0.8in},
 %]{geometry}
 
+\input{preamble.tex} % for Jessie
+
 \begin{document}
 
-\preprint{APS/123-QED}
+%\preprint{APS/123-QED}
 
 \title{Scattering in atomic and molecular physics \\ AM205 Final Project}% Force line breaks with \\
 % \thanks{A footnote to the article title}%
 
-\author{Ben Augenbraun, Andrei Gheorghe, Jessie Zhang}
+\author{Ben Augenbraun, Andrei H. Gheorghe, Jessie T. Zhang}
 
 \date{\today}% It is always \today, today,
              %  but any date may be explicitly specified
@@ -81,7 +83,7 @@ The study of collisions between pairs of atoms or molecules represents a vibrant
 \maketitle
 
 \section{\label{sec:Introduction}Introduction}
-It is the opinion of most physicists that simple questions deserve simple answers. Nevertheless, the (seemingly) simple question of, ``what happens when atom (or molecule) X collides with atom (or molecule) Y?" is not a simple one to answer. Nearly immediately after the discovery of quantum mechanics, physicists sought to describe the basic structure of matter within a quantum formalism. Broadly speaking, they did this by comparing theoretical predictions with experimental observations in one of two ways: by studying the precise internal structure of isolated atoms or molecules, or by studying the interactions between atoms and molecules~\cite{SchrodPaper1926,DiracTextbook,QuantumScatteringTextbook}. In order to isolate the atom or molecule under study from environmental perturbations, these studies were (and still are) often undertaken in highly dilute gas phases. In such cases, the density is low enough that the most likely sort of interaction is a collision between just a pair of particles. Even in these binary interactions, a great deal of physics lurks: the collision can redistribute energy between the collision partners; the internal quantum state of one, or both, of the colliding particles can be changed; and it is possible that a chemical reaction occurs in which the very makeup of the collision complex changes from beginning to end.
+It is the opinion of most physicists that simple questions deserve simple answers. Nevertheless, the (seemingly) simple question of, ``what happens when atom (or molecule) X collides with atom (or molecule) Y?" is not a simple one to answer. Nearly immediately after the discovery of quantum mechanics, physicists sought to describe the basic structure of matter within a quantum formalism. Broadly speaking, they did this by comparing theoretical predictions with experimental observations in one of two ways: by studying the precise internal structure of isolated atoms or molecules, or by studying the interactions between atoms and molecules~\cite{SchrodPaper1926,DiracTextbook,QuantumScatteringTextbook}. In order to isolate the atom or molecule under study from environmental perturbations, these studies were (and still are) often undertaken in highly dilute gas phases. In such cases, the density is low enough that the most likely sort of interaction is a collision between just a pair of particles. Even in these binary interactions, a great deal of physics lurks: (a) the collision can redistribute energy between the collision partners; (b) the internal quantum state of one, or both, of the colliding particles can be changed; and (c) it is possible that a chemical reaction occurs in which the very makeup of the collision complex changes from beginning to end.
 
 \subsection{Physical Motivation}
 Each of these three broad classes of collisions is of physical relevance to one or another subfield of physics. For example, detailed understanding of collision processes is of great importance to astrophysics because collisions are one of the main processes which can alter the rotational and vibrational internal states of molecules in interstellar clouds of dust~\cite{ColdChemBook,ColdMolsBook}. Once a collision has excited rotational or vibrational motions in the molecular constituents of the interstellar medium, excited-state molecules inevitably decay back to their ground states, emitting electromagnetic radiation in the process. Therefore, estimating the abundances and species of molecules present in outer space by studying the spectral lines observed by telescopes requires accurate \textit{a priori} knowledge of collisional rate coefficients~\cite{ColdChemBook}. Though over a hundred molecular species (including complex organic molecules) have been observed in space, most abundant in interstellar space are the ``simple" species of H, He, and H$_2$. Hence, many theoretical investigations of collisional processes for astrophysical purposes include collisions with these species. Furthermore, these collision calculations are often performed at temperatures ranging from a few Kelvin (K) to many tens of K, to match the typical temperatures observed in interstellar space. An example of such a calculation is provided in Sec.~\ref{sec:QuantumMethod}. For later reference, we will refer the temperature range on the order of a few Kelvin as ``cold."
@@ -90,7 +92,7 @@ At lower, so-called ``ultracold" temperatures ($< 1$ mK), temperatures much cold
 
 \subsection{Theoretical Methods in Scattering Theory}
 
-Based on this motivations, theoretical physicists have focused much effort on a complete description of a general collision process. In this paper, the problem we set out to solve is how to describe atomic and molecular collisions accurately. We focus on three potential methods, each of which is widely used by professional theorists. One, classical trajectory tracking, neglects quantum mechanical effects and simply asks: what orbits do colliding atoms and molecules take? By running many individual trajectories and looking at the statistics of these collisions, one can extract experimentally useful parameters like collision lifetimes and reaction rates. Furthermore, this method allows us to examine the role that chaos may play in atom + molecule collisions, especially at the ultralow temperatures commonly studied in experiments. Another method, called the RRKM method, attempts to use a mix of semi-classical and quantum mechanical reasoning to ascertain statistics about the collisions. \textbf{ADD A TWO SENTENCE SUMMARY ??}. Finally, we also consider fully quantum mechanical solutions of the scattering problem. This involves solving a Schrodinger equation including interaction potentials defined by the collision partners. While this is surely the most ``complete" description of a collision attainable, it is also the most difficult: not only can the Schrodinger equation considered include many coupled collision channels, but without sufficiently accurate interaction potentials the solution to the problem will not match reality. Determining these potential energy curves is a full-fledged field of theoretical physics in its own right, and one which we do not explore here. Instead, we study algorithms to solve the quantum scattering problem using toy potentials. In this way, we can extract collision properties in line with physical intuition but not highly accurate for any particular system. Note that, throughout this paper, we follow the standard convention that energy and temperature are considered somewhat equivalent here and are related by $E = k_B T$, where $k_B$ is Boltzmann's constant. We also make use of atomic units, in each $\hbar = 1$ and the unit of energy if the Hartree.\footnote{The abbreviation for ``atomic units" is a.u., and should not be confused with arbitrary units.}
+Based on this motivations, theoretical physicists have focused much effort on a complete description of a general collision process. In this paper, the problem we set out to solve is how to describe atomic and molecular collisions accurately. We focus on three potential methods, each of which is widely used by professional theorists. One, classical trajectory tracking, neglects quantum mechanical effects and simply asks: what orbits do colliding atoms and molecules take? By running many individual trajectories and looking at the statistics of these collisions, one can extract experimentally useful parameters such ask collision lifetimes and reaction rates. Furthermore, this method allows us to examine the role that chaos may play in atom + molecule collisions, especially at the ultralow temperatures commonly studied in experiments. Another method, called the RRKM method, attempts to use a mix of semi-classical and quantum mechanical reasoning to ascertain statistics about the collisions. In particular, the potential energy surface is treated semi-classically and solved for as a single channel problem quantum mechanically. Finally, we also consider fully quantum mechanical solutions of the scattering problem. This involves solving a Schrodinger equation including interaction potentials defined by the collision partners. While this is surely the most ``complete" description of a collision attainable, it is also the most difficult: not only can the Schrodinger equation considered include many coupled collision channels, but without sufficiently accurate interaction potentials the solution to the problem will not match reality. Determining these potential energy curves is a full-fledged field of theoretical physics in its own right, and one which we do not explore here. Instead, we study algorithms to solve the quantum scattering problem using toy potentials. In this way, we can extract collision properties in line with physical intuition but not highly accurate for any particular system. Note that, throughout this paper, we follow the standard convention that energy and temperature are considered somewhat equivalent here and are related by $E = k_B T$, where $k_B$ is Boltzmann's constant. We also make use of atomic units, in each $\hbar = 1$ and the unit of energy if the Hartree.\footnote{The abbreviation for ``atomic units" is a.u., and should not be confused with arbitrary units.}
 
 
 \section{\label{sec:ClassicalTraj} Classical Method: Trajectory Tracking}
@@ -231,6 +233,167 @@ As in~\cite{bohn2014,mcdonald1985}, we can relate $\alpha$ to the fractal dimens
 %\end{figure}
 
 \section{\label{sec:RRKM}Semi-classical Method: The RRKM Approximation}
+
+\subsection{\label{sec:RRKM-overview} Overview}
+
+On a semi-classical level, quantum scattering can be viewed as classical particles sampling the discrete quantum modes of the potential energy surface over the course of the encounter. Incoming particles collide and accelerate into the potential well, where the potential energy is converted into rotational and vibrational energies of the molecular complex. This is in contrast to the pure classical approach in the previous section, where states within the potential well are not quantized. 
+
+In this picture, the Rice-Ramsperger-Kassel-Marcus (RRKM) theory~\cite{marcus1952-1,marcus1952-2} from chemistry suggests that the lifetime of a complex can be approximated as 
+\al{
+\tau_{dos} = \frac{2\pi\hbar\rho}{N_0}\label{eqn:rrkm}
+}
+where $\rho$ is the density of states (DOS) of the potential energy surface at the collision energy, and $N_0$ the number of open channels. Intuitively, this approximation assumes that over the course of the reaction, the collision complex samples all possible states over the potential energy surface. At high temperatures, $N_0$ may in general be large, and the lifetime is expected to be short. At ultracold temperatures however, the number of quantum states available to the collision is limited to a few, and we can even have $N_0=1$, giving experimentally observable lifetimes. Moreover, this can be compared to the classical approach, which serves as a foil for both theories.
+
+While equation (\ref{eqn:rrkm}) is based on semi-classical grounds, the DOS of the energy spectrum must be found through quantum mechanical means. This involves solving for the bound states of the single channel Schrodinger equation. To this end, we utilize the mapped Fourier grid Hamiltonian (FGH) method \cite{clay1989,fattal1996}, which is well-suited for finding bound states of molecular potentials.
+
+
+\subsection{\label{sec:FGH}Mapped Fourier grid Hamiltonian method}
+
+\subsubsection{\label{sec:FGH-background}Background}
+
+The single channel Shcrodinger equation we wish to solve is given by
+\al{
+\hat{H}\ket{\psi} = E\ket{\psi}
+}
+where the Hamiltonian $\hat{H}$ as an operator can in general consist of the kinetic energy part $\hat{T}$ and a potential energy part $V(\hat{x})$ independent of momentum
+\al{
+H = \hat{T} + V(\hat{x}) = \frac{\hat{p}^2}{2m} + V(\hat{x})
+}
+In particular, we are interested in bound states of this system, which are given by the condition $E<0$.
+
+The potential energy is diagonal in the coordinate basis, whereas the kinetic energy is diagonal in momentum space basis, i.e.
+\al{
+\bracket{x}{V}{x'} &&= V(x)\delta(x-x')\\
+\bracket{k}{T}{k'} &&= \frac{\hbar^2 k^2}{2m}\delta(k-k')
+}
+where we have defined
+\al{
+\hat{x}\ket{x} = x\ket{x},\ \hat{p}\ket{k}=\hbar k\ket{k}
+}
+The main idea of the FGH method is to utilize the fact that position space and momentum space representations of a wavefunction are Fourier transforms of each other. This means that to find the matrix elements of the Hamiltonian, we can Fourier transform from position space into momentum space to evaluate the kinetic energy operator where it is diagonal, then inverse Fourier transform back into position space.
+
+\subsubsection{\label{sec:FGH-theory}Theory}
+
+To begin with, we write out the matrix elements of the Hamiltonian exactly in the position basis representation.
+\al{
+\bracket{x}{H}{x'} &&= \bracket{x}{V}{x'} + \bracket{x}{T}{x'} \nonumber \\ 
+&&=\int_{-\infty}^\infty\braket{x}{k}T\braket{k}{x'}dk + V(x)\delta(x-x')\nonumber 
+\\ &&= \frac{1}{2\pi}\int_{-\infty}^\infty e^{ikx}T_ke^{-ikx'}dk + V(x)\delta(x-x')\label{eqn:fgh-continuous} \\
+}
+where we have defined 
+\al{
+T_k=\frac{\hbar^2k^2}{2m}
+} 
+and used the relation
+\al{
+\braket{k}{x}=\frac{1}{\sqrt{2\pi}}e^{-ikx}
+}
+
+In the FGH method, we discretize position space in the range $[0,x_{max}]$ by an even grid of $N$ points, so that the spacing of each step is $\Delta x$ and denote
+\al{
+x_i=i\Delta x.
+}
+As a result, momentum space is discretized correspondingly in a reciprocal manner, where the range and spacing of the momentum space grid is determined by those in position space. In particular, the grid is limited to the range $[-k_{max},k_{max}]$ where $k_{max} = \frac{\pi}{\Delta x}$ and is discretized into $N$ points with 
+\al{
+\Delta x \Delta k = \frac{2\pi}{N}
+}
+As for the position space grid, we denote
+\al{
+k_i = i\Delta k
+}
+With such a discretization, the potential and kinetic potential parts in equation (\ref{eqn:fgh-continuous}) become
+\al{
+\bracket{x_i}{V}{x_j} && = V(x_i)\delta_{ij} \\
+\bracket{x_i}{T}{x_j} &&= \frac{1}{2\pi}\sum_{l=-N/2}^{N/2}e^{ik_lx_i}\cdot T_{k_l}\cdot e^{-ik_lx_j}\Delta k \nonumber \\
+&& = \frac{1}{2\pi}\frac{1}{N}\sum_{l=-N/2}^{N/2}e^{i2\pi l i/N}\cdot T_{k_l}\cdot e^{-i2\pi lj/N}
+}
+Putting these together gives the Hamiltonian in the discretized coordinate space grid
+\al{
+H_{ij} &&= \bracket{x_i}{H}{x_j} \nonumber \\
+&& = \frac{1}{2\pi N} \sum_{l=-N/2}^{N/2}e^{il2\pi i}\cdot T_l \cdot e^{-il2\pi j}+V(x_i)\delta_{ij} \label{eqn:fgh-discrete}
+}
+
+This equation is the crux of the FGH method. It can also be put in the form of a Fourier transform then inverse Fourier transform. In particular, if we let
+\al{
+\phi_n =(0,&&..,0,1,0,...,0)^T\\
+&& \text{n-th index}
+}
+be a basis vector in position space, then the n-th column of the Hamiltonian can be expressed as
+\al{
+H_{in} = [(\mathcal{F}^{-1}T\mathcal{F}+V)\phi_n]_i
+}
+where $\mathcal{F}$ is the Fourier transform operator and $T$ is the diagonal operator $\diag{T_{k_l}}$. This equation is equivalent to equation (\ref{eqn:fgh-discrete}), but explicitly shows the use of the Fourier transform into momentum space. One of the advantages of this method is that the Fourier transform can be completed efficiently by means of the discrete fast Fourier transform (DFFT).
+
+In principle, from here we may diagonalize this Hamiltonian to obtain the energy values and wavefunctions we desire. The FGH method presented as is however, can only be implemented on an evenly spaced grid. This can be problematic with many potentials of interest in atomic and molecular physics, where potentials consist of a small potential well region that then asymptotes to zero at large distances. In the potential well, the wavefunction oscillates rapidly, whereas it decays exponentially in the classically forbidden region. Since rapid oscillations correspond to large momentum, and large momentum range requires small grid spacing in position space, one would optimally hope to have a denser grid in the potential well than in the classically forbidden region.
+
+This can be achieved by taking a nonlinear mapping from original coordinates $(x)$ to a new set of coordinates $(Q)$. The representation of the kinetic energy term in position basis is given as 
+\al{
+T = -\frac{\hbar^2}{2m}\left(J^{-1}(Q)\frac{\partial}{\partial Q}\right)^2
+}
+where $J=\frac{\partial x}{\partial Q}$. This term can then be found from position space by taking two Fourier transform and inverse Fourier transform pairs in sequence. 
+\al{
+H_{in} = [(J^{-1}\mathcal{F}^{-1}\sqrt{T}\mathcal{F}J^{-1}\mathcal{F}^{-1}\sqrt{T}\mathcal{F}+V)\phi_n]_i
+}
+where we have used $\sqrt{T}$ to denote $\diag{\sqrt{T_{k_l}}}$. This gives the mapped FGH method, which typically performs much better in convergence compared to its even grid counterpart.
+
+The mapping 
+\al{
+x = Q-A\arctan(\beta Q)
+}
+where $A,\beta$ are parameters that can be optimized, turns out to have nice properties for the current problem of interest~\cite{fattel1996}. This is plotted in Fig.~\ref{fig:mapping}, where we see that the grid is denser at small distances and gradually sparsens at large distances.
+
+\begin{figure}
+\includegraphics{figures/mapping}
+\caption{\label{fig:mapping}Mapping of coordinates $x = Q-A\arctan(\beta Q)$, where $A=2000, \beta = 1/2020$}. The grid gives a denser sampling for small distances than at large distances as desired.
+\end{figure}
+
+\subsection{Density of states and lifetime}
+
+To find the density of states relevant for applying RRKM theory, we need to consider the bound states that arise from both the long range atom+dimer collision and the short range atom+atom interactions that form dimers. In both these cases, the potential in the radial part of Schrodinger's equation can be approximated as a Lennard-Jones potential of the form
+\al{
+V^{(L)}_{LJ}(R) = \frac{C_{12}}{R^{12}} - \frac{C_6}{R^6} + \frac{L(L+1)}{2\mu R^2}
+}
+where $L$ denotes the partial wave number (more details in Sec.~\ref{sec:QuantumTraj}).
+
+For the short range dimer states, the $C_{6,A_2}$ and $D_{e,A_2}$ values are taken as in Table~\ref{table:coeffs}. Each of the ro-vibrational bound states of this potential gives an atom+dimer collision channel. We label the energy for each of these ro-vibrational states as $E_{v,n}$, where $v,n$ denote the vibrational and rotational number respectively. An example of this is given in Fig.~\ref{fig:li_dimer_wavefunctions}.
+
+\begin{figure}
+\includegraphics{figures/li_li_n0_wavefunctions}
+\caption{\label{fig:li_dimer_wavefunctions}Wavefunctions and corresponding energy levels of Li+Li system with angular momentum number $n=0$.}
+\end{figure}
+
+To find the long range bound states, we assume that $C_{6,A_2+A} = 2C_{6,A_2}$ and $D_{e,A_2+A}=2D_{e+A_2}$. The bound states of this long range interaction gives another series of energy levels $E_{L,\alpha}$. As above, $L,\alpha$ label the angular momentum and vibrational numbers respectively. 
+
+Now, each asymptotic ro-vibrational channel gives an offset in the collision threshold as $E_{L,\alpha,v,n} = E_{L,\alpha}+E_{v,n}$. The aggregate series $E_{L,\alpha,v,n}$ constitutes the spectrum consisting of the bound states over the reaction potential surface.
+
+We note that conservation of angular momentum requires that $\ve{J}=\ve{L}+\ve{n}$, so that relevant restrictions are placed on the values of $L,n$. In particular, for the case of S-wave collisions, $J=0$, so that $L=n$. Moreover, we need to account for any degeneracies arising from the magnetic quantum number. For instance, in the case the total magnetic quantum number $M=M_L+m_n=0$ vanishes, there is a degeneracy of $2L+1$ for each corresponding energy level.
+
+\begin{figure}
+\includegraphics{figures/dos}
+\caption{\label{fig:dos}Schematic of method to find DOS near ro-vibrational ground state threshold (not to scale). Each potential energy curve represents an atom+dimer interaction potential (blue, purple, orange series). Horizontal lines in each color series belong to the series $E_{\alpha}^L$ for a given $(v,n)$. The energy is offset by the atom+atom bound state energy. These combined give rise to the energy spectrum $E_\alpha^{(L,v,n)}$. We count the number of states in the gray shaded area to find an average DOS near the ro-vibrational collision threshold.}
+\end{figure}
+
+
+At ultracold temperatures, the incoming/outgoing channel is restricted to the rovibrational ground state $\nu = 0, n = 0$. To find the DOS around this energy level, we count the average number of states within a given energy interval.
+
+Fig.~\ref{fig:dos} summarizes the process of finding the energy spectrum. In our implementation, we take $J=0$ (corresponding to vanishing impact parameter $b=0$ classically) and $M=M_L+m_n=0$. We list our results of the DOS and corresponding complex lifetime as computed from Eq.~\ref{eqn:rrkm} in Table~\ref{tab:dos}. We find that the results agree with those obtained from the classical trajectories to within a factor of 2. This is remarkable, as it suggests that the classical approach is sufficient for certain observables of interest. 
+
+\begin{table}[b]
+\caption{\label{tab:dos}Density of states}
+\begin{ruledtabular}
+\begin{tabular}{cccc}
+ Atom species & DOS [$\text{mK}^{-1}$] & $\tau_{dos}$ [ns] & $\tau_\text{classical}$ [ns]\\ 
+\hline
+Li & 0.06 & 2.8 & dd \\
+K & 2.52 & 120 & dd \\
+Cs & 32.15 & 1542 & dd
+\end{tabular}
+\end{ruledtabular}
+\end{table}
+
+
+
+
 
 \section{\label{sec:QuantumTraj}Quantum Mechanical Method}
 Because, ultimately, quantum mechanics rules the day\footnote{Barring a \textit{truly} remarkable discovery in the coming days.}, the ``gold standard" solution to any scattering problem is surely quantum mechanical in nature. What this entails is solving the Schrodinger equation for the two particles moving under the influence of their mutual interaction and any external electromagnetic fields. As long as these external fields have no time variation, the solution to the time-\textit{independent} Schrodinger equation will be sufficient to extract physically meaningful observables. Here, we briefly describe the necessary quantum mechanical formalism before delving into numerical methods.

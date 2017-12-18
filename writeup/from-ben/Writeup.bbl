@@ -6,7 +6,7 @@
 %Control: page (0) single
 %Control: year (1) truncated
 %Control: production of eprint (0) enabled
-\begin{thebibliography}{21}%
+\begin{thebibliography}{25}%
 \makeatletter
 \providecommand \@ifxundefined [1]{%
  \@ifx{#1\undefined}
@@ -134,6 +134,34 @@
   {author} {\bibfnamefont {J.~A.}\ \bibnamefont {Yorke}},\ }\href@noop {}
   {\bibfield  {journal} {\bibinfo  {journal} {Physica D}\ }\textbf {\bibinfo
   {volume} {17}} (\bibinfo {year} {1985})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Marcus}(1952{\natexlab{a}})}]{marcus1952-1}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {r.~A.}\ \bibnamefont
+  {Marcus}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {J.
+  Chem. Phys.}\ }\textbf {\bibinfo {volume} {20}} (\bibinfo {year}
+  {1952}{\natexlab{a}})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Marcus}(1952{\natexlab{b}})}]{marcus1952-2}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {r.~A.}\ \bibnamefont
+  {Marcus}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal} {J.
+  Chem. Phys.}\ }\textbf {\bibinfo {volume} {20}} (\bibinfo {year}
+  {1952}{\natexlab{b}})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Clay}\ and\ \citenamefont
+  {Balint-Kurti}(1989)}]{clay1989}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {C.~M.}\ \bibnamefont
+  {Clay}}\ and\ \bibinfo {author} {\bibfnamefont {G.~G.}\ \bibnamefont
+  {Balint-Kurti}},\ }\href@noop {} {\bibfield  {journal} {\bibinfo  {journal}
+  {J. Chem. Phys.}\ }\textbf {\bibinfo {volume} {6}} (\bibinfo {year}
+  {1989})}\BibitemShut {NoStop}%
+\bibitem [{\citenamefont {Fattal}\ \emph {et~al.}(1996)\citenamefont {Fattal},
+  \citenamefont {Baer},\ and\ \citenamefont {Kosloff}}]{fattal1996}%
+  \BibitemOpen
+  \bibfield  {author} {\bibinfo {author} {\bibfnamefont {E.}~\bibnamefont
+  {Fattal}}, \bibinfo {author} {\bibfnamefont {R.}~\bibnamefont {Baer}}, \ and\
+  \bibinfo {author} {\bibfnamefont {R.}~\bibnamefont {Kosloff}},\ }\href@noop
+  {} {\bibfield  {journal} {\bibinfo  {journal} {Phys. Rev. E}\ }\textbf
+  {\bibinfo {volume} {53}} (\bibinfo {year} {1996})}\BibitemShut {NoStop}%
 \bibitem [{\citenamefont {Krems}(2017)}]{Krems2017}%
   \BibitemOpen
   \bibfield  {author} {\bibinfo {author} {\bibfnamefont {R.~V.}\ \bibnamefont

@@ -1,4 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2015)
+This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: Writeup.aux
 The style file: apsrev4-1.bst
@@ -11,6 +11,7 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Database file #1: WriteupNotes.bib
 Database file #2: WriteupFinal.bib
+Warning--I didn't find a database entry for ""
 control{REVTEX41Control}, control.key{N/A}, control.author{N/A}, control.editor{N/A}, control.title{N/A}, control.pages{N/A}, control.year{N/A}, control.eprint{N/A}, 
 control{apsrev41Control}, control.key{N/A}, control.author{08}, control.editor{1}, control.title{}, control.pages{0}, control.year{1}, control.eprint{N/A}, 
 Warning--jnrlst (dependency: not reversed) set 1
@@ -26,45 +27,45 @@ Control: production of eprint (0) enabled
 Warning--missing journal in AlexanderNotes
 Warning--empty year in AlexanderNotes
 Warning--empty year in MOLPRO
-You've used 23 entries,
+You've used 27 entries,
             5847 wiz_defined-function locations,
-            1728 strings with 17531 characters,
-and the built_in function-call counts, 19734 in all, are:
-= -- 1169
-> -- 531
-< -- 150
-+ -- 179
-- -- 145
-* -- 2998
-:= -- 1989
-add.period$ -- 21
-call.type$ -- 23
-change.case$ -- 84
-chr.to.int$ -- 31
-cite$ -- 26
-duplicate$ -- 1957
-empty$ -- 1475
-format.name$ -- 312
-if$ -- 3816
-int.to.chr$ -- 1
-int.to.str$ -- 30
-missing$ -- 246
-newline$ -- 115
-num.names$ -- 66
-pop$ -- 911
+            1749 strings with 17929 characters,
+and the built_in function-call counts, 22844 in all, are:
+= -- 1397
+> -- 592
+< -- 168
++ -- 204
+- -- 159
+* -- 3432
+:= -- 2331
+add.period$ -- 25
+call.type$ -- 27
+change.case$ -- 100
+chr.to.int$ -- 34
+cite$ -- 30
+duplicate$ -- 2267
+empty$ -- 1715
+format.name$ -- 350
+if$ -- 4422
+int.to.chr$ -- 2
+int.to.str$ -- 34
+missing$ -- 285
+newline$ -- 127
+num.names$ -- 78
+pop$ -- 1061
 preamble$ -- 1
-purify$ -- 103
+purify$ -- 123
 quote$ -- 0
-skip$ -- 665
+skip$ -- 776
 stack$ -- 0
-substring$ -- 325
-swap$ -- 1720
-text.length$ -- 64
+substring$ -- 379
+swap$ -- 1982
+text.length$ -- 71
 text.prefix$ -- 0
 top$ -- 10
-type$ -- 302
+type$ -- 353
 warning$ -- 4
-while$ -- 56
+while$ -- 64
 width$ -- 0
-write$ -- 209
-(There were 4 warnings)
+write$ -- 241
+(There were 5 warnings)
